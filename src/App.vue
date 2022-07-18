@@ -9,14 +9,21 @@
     label="Description"
     type="text"
   />
+  <BaseSelect
+    :options="categories"
+    v-model="event.category"
+    label="Select a category"
+  />
 </template>
 
 <script>
 import BaseInput from './components/BaseInput.vue';
+import BaseSelect from './components/BaseSelect.vue';
 
 export default {
   components: {
     BaseInput,
+    BaseSelect,
   },
   data() {
     return {
@@ -31,6 +38,15 @@ export default {
           music: false,
         },
       },
+      categories: [
+        'sustainability',
+        'nature',
+        'animal welfare',
+        'housing',
+        'education',
+        'food',
+        'community',
+      ],
     };
   },
 };
