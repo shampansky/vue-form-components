@@ -14,6 +14,14 @@
     v-model="event.category"
     label="Select a category"
   />
+  <BaseCheckbox
+    v-model="event.extras.catering"
+    label="Catering"
+  />
+  <BaseCheckbox
+    v-model="event.extras.music"
+    label="Music"
+  />
 </template>
 
 <script>
