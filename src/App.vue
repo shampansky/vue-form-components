@@ -1,4 +1,5 @@
 <template>
+<form @submit.prevent="sendForm">
   <BaseInput
     v-model="event.title"
     label="Title"
@@ -34,9 +35,12 @@
     vertical
   />
   </div>
+  <button type="submit">Sumbit</button>
+</form>
 </template>
 
 <script>
+import axios from 'axios';
 
 export default {
   data() {
@@ -66,6 +70,22 @@ export default {
         { label: 'No', value: 0 },
       ],
     };
+  },
+  methods: {
+    sendForm() {
+      axios.post(
+        'http://localhost:3000/events',
+        this.event,
+      ).then((response) => new Promise((resolve) => {
+        setTimeout(() => { resolve(response); }, 2000);
+      }))
+        .then((response) => {
+          console.log('response', response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
 };
 </script>

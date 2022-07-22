@@ -1,0 +1,52 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "category": "animal welfare",
+      "title": "Frenz of bunz",
+      "description": "🐰 an frenz",
+      "location": "Zoom - stay safe",
+      "pets": 1,
+      "extras": {
+        "catering": true,
+        "music": true
+      }
+    },
+    {
+      "category": "",
+      "title": "",
+      "description": "",
+      "location": "",
+      "pets": 1,
+      "extras": {
+        "catering": false,
+        "music": false
+      },
+      "id": 2
+    },
+    {
+      "category": "",
+      "title": "",
+      "description": "",
+      "location": "",
+      "pets": 1,
+      "extras": {
+        "catering": false,
+        "music": false
+      },
+      "id": 3
+    },
+    {
+      "category": "",
+      "title": "",
+      "description": "",
+      "location": "",
+      "pets": 1,
+      "extras": {
+        "catering": false,
+        "music": false
+      },
+      "id": 4
+    }
+  ]
+}
