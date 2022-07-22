@@ -14,14 +14,26 @@
     v-model="event.category"
     label="Select a category"
   />
-  <BaseCheckbox
-    v-model="event.extras.catering"
-    label="Catering"
+  <div>
+    <BaseCheckbox
+      v-model="event.extras.catering"
+      label="Catering"
+    />
+  </div>
+  <div>
+    <BaseCheckbox
+      v-model="event.extras.music"
+      label="Music"
+    />
+  </div>
+  <div>
+  <BaseRadioGroup
+    v-model="event.pets"
+    name="pets"
+    :options="petOptions"
+    vertical
   />
-  <BaseCheckbox
-    v-model="event.extras.music"
-    label="Music"
-  />
+  </div>
 </template>
 
 <script>
@@ -48,6 +60,10 @@ export default {
         'education',
         'food',
         'community',
+      ],
+      petOptions: [
+        { label: 'Yes', value: 1 },
+        { label: 'No', value: 0 },
       ],
     };
   },
